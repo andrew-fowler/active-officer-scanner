@@ -12,7 +12,7 @@ def get_stale_company_data():
     if file_exists(config.data_filepath):
         return get_json_from_file(config.data_filepath)
     else:
-        raise IOError("No existing company data found in: {}".format(config.data_filepath))
+        return None
 
 
 def get_fresh_company_data():
